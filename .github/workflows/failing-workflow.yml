@@ -1,0 +1,9 @@
+name: Failing workflow
+
+on: [push]
+
+jobs:
+  failing-job:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: cat ${{ env.UNSET_VAR }}
